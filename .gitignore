@@ -55,36 +55,6 @@ coverage.xml
 .pytest_cache/
 cover/
 
-# Translations
-
-*.mo
-*.pot
-
-# Django
-
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask
-
-instance/
-.webassets-cache
-
-# Scrapy
-
-.scrapy
-
-# Sphinx documentation
-
-docs/_build/
-
-# PyBuilder
-
-.pybuilder/
-target/
-
 # Jupyter Notebook
 
 .ipynb_checkpoints/
@@ -119,42 +89,28 @@ service-account*.json
 *.p12
 *.pfx
 
-# pyenv
-
-# .python-version
-
-# pipenv
-
-# Pipfile.lock
-
-# UV
-
-# uv.lock
-
-# Poetry
-
-# poetry.lock
-
-# poetry.toml
-
-# PDM
-
-# pdm.lock
-
-# pdm.toml
+# Python environment and dependency tools
 
 .pdm-python
 .pdm-build/
-
-# Pixi
-
-# pixi.lock
-
 .pixi/
-
-# PEP 582
-
 **pypackages**/
+
+# Type checkers and linters
+
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Test, coverage, and build caches
+
+.pytest_cache/
+.coverage
+.coverage.*
+.cache/
 
 # Celery
 
@@ -177,58 +133,33 @@ rabbitmq-data/
 
 activemq-data/
 
-# SageMath parsed files
+# Framework-specific files
 
-*.sage.py
+instance/
+.webassets-cache
+.scrapy
+db.sqlite3
+db.sqlite3-journal
+local_settings.py
 
-# Spyder
+# Documentation build output
 
+docs/_build/
+site/
+
+# IDE and editor files
+
+.idea/
+.vscode/
 .spyderproject
 .spyproject
-
-# Rope
-
 .ropeproject
-
-# MkDocs documentation
-
-/site
-
-# Mypy
-
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-
-.pyre/
-
-# Pytype
-
-.pytype/
-
-# Cython debug symbols
-
-cython_debug/
-
-# PyCharm
-
-# .idea/
-
-# Abstra
-
-.abstra/
-
-# Visual Studio Code
-
-# .vscode/
-
 tempCodeRunnerFile.py
 
-# Ruff
+# Operating system files
 
-.ruff_cache/
+.DS_Store
+Thumbs.db
 
 # PyPI configuration
 
@@ -240,11 +171,6 @@ marimo/_static/
 marimo/_lsp/
 **marimo**/
 
-# Streamlit
+# Streamlit local secrets
 
 .streamlit/secrets.toml
-
-# Operating system files
-
-.DS_Store
-Thumbs.db
