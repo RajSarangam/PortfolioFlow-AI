@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
 
 **pycache**/
+__pycache__/
 *.py[cod]
 *$py.class
 
@@ -94,7 +95,7 @@ service-account*.json
 .pdm-python
 .pdm-build/
 .pixi/
-**pypackages**/
+__pypackages__/
 
 # Type checkers and linters
 
@@ -169,7 +170,7 @@ Thumbs.db
 
 marimo/_static/
 marimo/_lsp/
-**marimo**/
+__marimo__/
 
 # Streamlit local secrets
 
