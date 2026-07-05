@@ -1,0 +1,23 @@
+{
+  "_comment": "SYNTHETIC data for the capstone. No real customer, employee, or program information. Capacity is in story points per week. Edit freely.",
+  "teams": [
+    { "name": "Platform Engineering", "weekly_capacity_points": 40, "committed_points": 34, "available_points": 6, "focus": "core services, identity, infra" },
+    { "name": "Data & Analytics", "weekly_capacity_points": 30, "committed_points": 18, "available_points": 12, "focus": "pipelines, reporting, ML enablement" },
+    { "name": "ERP & Finance Systems", "weekly_capacity_points": 35, "committed_points": 33, "available_points": 2, "focus": "SAP, financial close, procurement" },
+    { "name": "HR Systems", "weekly_capacity_points": 25, "committed_points": 9, "available_points": 16, "focus": "Workday, onboarding, payroll integrations" },
+    { "name": "CRM & Revenue", "weekly_capacity_points": 30, "committed_points": 27, "available_points": 3, "focus": "Salesforce, sales ops, customer 360" },
+    { "name": "Customer Experience", "weekly_capacity_points": 20, "committed_points": 11, "available_points": 9, "focus": "support tooling, self-service, CSAT" }
+  ],
+  "active_projects": [
+    { "id": "PRJ-1001", "name": "Unified Customer 360", "business_unit": "Sales", "team": "CRM & Revenue", "status": "in_flight", "keywords": ["customer", "salesforce", "360", "data unification"], "dependencies": ["Data & Analytics"] },
+    { "id": "PRJ-1002", "name": "Financial Close Automation", "business_unit": "Finance", "team": "ERP & Finance Systems", "status": "in_flight", "keywords": ["sap", "finance", "month-end", "close", "automation"], "dependencies": [] },
+    { "id": "PRJ-1003", "name": "Workday Onboarding Revamp", "business_unit": "HR", "team": "HR Systems", "status": "in_flight", "keywords": ["workday", "onboarding", "hr", "employee"], "dependencies": [] },
+    { "id": "PRJ-1004", "name": "Self-Service Support Portal", "business_unit": "Support", "team": "Customer Experience", "status": "planned", "keywords": ["support", "self-service", "portal", "deflection", "csat"], "dependencies": ["Platform Engineering"] },
+    { "id": "PRJ-1005", "name": "Identity & SSO Consolidation", "business_unit": "IT", "team": "Platform Engineering", "status": "in_flight", "keywords": ["identity", "sso", "security", "auth"], "dependencies": [] },
+    { "id": "PRJ-1006", "name": "Sales Forecasting ML", "business_unit": "Sales", "team": "Data & Analytics", "status": "planned", "keywords": ["forecasting", "ml", "sales", "pipeline", "analytics"], "dependencies": ["CRM & Revenue"] },
+    { "id": "PRJ-1007", "name": "Procurement Spend Dashboard", "business_unit": "Finance", "team": "Data & Analytics", "status": "in_flight", "keywords": ["procurement", "spend", "dashboard", "reporting"], "dependencies": ["ERP & Finance Systems"] },
+    { "id": "PRJ-1008", "name": "Payroll Integration Cleanup", "business_unit": "HR", "team": "HR Systems", "status": "planned", "keywords": ["payroll", "workday", "integration", "hr"], "dependencies": ["ERP & Finance Systems"] },
+    { "id": "PRJ-1009", "name": "Customer Health Scoring", "business_unit": "Support", "team": "CRM & Revenue", "status": "planned", "keywords": ["customer", "health", "scoring", "churn", "salesforce"], "dependencies": ["Data & Analytics"] },
+    { "id": "PRJ-1010", "name": "Infra Cost Optimization", "business_unit": "IT", "team": "Platform Engineering", "status": "in_flight", "keywords": ["infra", "cost", "optimization", "cloud"], "dependencies": [] }
+  ]
+}

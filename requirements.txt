@@ -1,0 +1,5 @@
+google-adk>=2.3.0
+google-genai>=1.0.0
+pydantic>=2.0
+# Only needed if you run the optional MCP server upgrade:
+mcp>=1.0.0
