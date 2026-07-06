@@ -16,3 +16,8 @@ PORTFOLIO_PATH = os.environ.get(
     "PORTFOLIO_PATH",
     os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "portfolio.json"),
 )
+
+# Sampling temperature for all agents. 0 makes the pipeline deterministic:
+# the same request yields the same scores and routing every run -- important
+# for a governance process and for a reproducible demo/video.
+TEMPERATURE = float(os.environ.get("TRIAGE_TEMPERATURE", "0"))
