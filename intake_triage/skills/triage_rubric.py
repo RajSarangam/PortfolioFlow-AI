@@ -27,14 +27,14 @@ dimension, pick the midpoint (3) and add that dimension to "missing_info".
 """
 
 
-def score_to_tier(value: int, effort: int, risk: int, alignment: int) -> dict:
+def score_to_tier(value: int, effort: int, risk: int, strategic_alignment: int) -> dict:
     """Map four 1-5 scores to a priority tier deterministically.
 
     Returns a dict with the computed priority score, tier, and a short reason.
     Formula favors high value + alignment, penalizes effort + risk.
     """
     # Weighted: value and alignment pull priority up; effort and risk pull it down.
-    priority_score = (value * 2) + (alignment * 2) - effort - risk  # range ~ -6..18
+    priority_score = (value * 2) + (strategic_alignment * 2) - effort - risk  # range ~ -6..18
 
     if priority_score >= 12:
         tier, reason = "P0", "high value/alignment, manageable effort & risk"
