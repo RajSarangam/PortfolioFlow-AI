@@ -7,6 +7,7 @@ dependent work, then recommends a route. Reads {parsed_request} and
 The before_tool_callback wires in the guardrail layer for every tool call.
 """
 from google.adk.agents import Agent
+from google.genai import types as gt
 from .. import config
 from ..tools.portfolio_tools import lookup_capacity, find_related_projects
 from ..guardrails import tool_guardrail
@@ -48,5 +49,6 @@ Output the JSON only, no prose, no code fences.
 """,
     tools=[find_related_projects, lookup_capacity],
     before_tool_callback=tool_guardrail,   # guardrail runs on every tool call
+    generate_content_config=gt.GenerateContentConfig(temperature=config.TEMPERATURE),
     output_key="routing_recommendation",   # -> session.state["routing_recommendation"]
 )

@@ -5,6 +5,7 @@ to session state under 'parsed_request' so the next agent in the pipeline can
 read it via {parsed_request} in its own instruction.
 """
 from google.adk.agents import Agent
+from google.genai import types as gt
 from .. import config
 
 intake_parser = Agent(
@@ -32,5 +33,6 @@ Return ONLY a JSON object with these fields (use null or [] when unknown):
 
 Output the JSON only -- no prose, no code fences.
 """,
+    generate_content_config=gt.GenerateContentConfig(temperature=config.TEMPERATURE),
     output_key="parsed_request",  # -> session.state["parsed_request"]
 )

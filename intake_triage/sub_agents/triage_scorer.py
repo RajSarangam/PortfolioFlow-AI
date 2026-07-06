@@ -5,6 +5,7 @@ assigns 1-5 scores plus a priority tier. Reads {parsed_request} from state and
 writes its result to 'triage_assessment'.
 """
 from google.adk.agents import Agent
+from google.genai import types as gt
 from .. import config
 from ..skills.triage_rubric import RUBRIC_TEXT
 
@@ -31,5 +32,6 @@ Then return ONLY a JSON object:
 Do not compute the priority tier yourself -- a downstream step does that
 deterministically. Output the JSON only, no prose, no code fences.
 """,
+    generate_content_config=gt.GenerateContentConfig(temperature=config.TEMPERATURE),
     output_key="triage_assessment",  # -> session.state["triage_assessment"]
 )
